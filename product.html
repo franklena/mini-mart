@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Products</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+nav{
+	width:100%;
+	display:flex;
+	align-items:center;
+	margin:20px auto;
+}
+ul{
+	float:right;
+	margin-top:25px;
+	margin-left:150px;
+}
+ul li{
+	display:inline-block;
+}
+ul li a{
+	font-size:18px;
+	text-decoration:none;
+	color:#000;
+	padding:5px 20px;
+	transition:0.6s ease;
+}
+ul li a:hover{
+	background-color:#000;
+	color:#fff;
+}
+ul li.active a{
+	background-color:#000;
+	color:#fff;
+}
+.logo img{
+	float:left;
+	width:150px;
+	height:auto;
+	margin-right:150px;
+}
+.heading{
+	text-align:center;
+	padding:20px 30px;
+	margin-top:0px;
+	color:palegreen;
+	text-transform:uppercase;
+	font-size:70px;
+}
+.heading span{
+	color:lightblue;
+	text-transform:uppercase;
+}
+.image-container{
+	display:flex;
+	justify-content:center;
+	flex-wrap:wrap;
+	gap:10px;
+	padding-top:20px;
+}
+.image-container .image{
+	padding:15px;
+	background-color:white;
+	border:2px solid black;
+	width:350px;
+	border-radius:10px;
+}
+.image-container .image img{
+	height:270px;
+	width:100%;
+	margin-bottom:10px;
+}
+.image-container .image img:hover{
+	transform:translateY(-15px);
+}
+.image-container .image h2{
+	text-align:center;
+	font-size:25px;
+}
+.image-container .image input{
+	height:20px;
+	width:40px;
+}
+.image-container .image button{
+	height:30px;
+	width:60px;
+	background-color:lightblue;
+}
+.span{
+	width:50%;
+	margin-top:20px;
+	border:3px ridge purple;
+	background-color:white;
+	color:black;
+	font-size:20px;
+	padding:10px;
+	font-weight:bold;
+}
+@media(max-width:768px){
+nav{
+	flex-direction:column;
+}
+ul{
+	margin-top:20px;
+	margin-left:0px;
+}
+ul li a{
+	font-size:10px;
+	padding:2px 10px;
+}
+.logo img{
+	width:90px;
+	height:auto;
+	margin-right:330px;
+}
+.heading{
+	font-size:40px;
+}
+.image-container .image{
+	width:300px;
+}
+.image-container .image img{
+	height:200px;
+	width:100%;
+}
+.image-container .image h2{
+	font-size:20px;
+}
+.image-container .image input{
+	height:15px;
+	width:35px;
+}
+.image-container .image button{
+	height:19px;
+	width:60px;
+}
+}
+</style>
+</head>
+<body>
+<header>
+	<nav>
+	<div class="logo">
+		<img src="logo.jpg">
+	</div>
+	<ul>
+		<li><a href="home.html">HOME</a></li>
+		<li class="active"><a href="product.html">PRODUCT</a></li>
+		<li><a href="about.html">ABOUT</a></li>
+		<li><a href="review.html">REVIEW</a></li>
+		<li><a href="contact.html">CONTACT</a></li>
+		<li><a href="login.html">LOGIN</a></li>
+	</ul>
+	</nav>
+</header>
+<h1 class="heading">Our<span>Products</span></h1>
+<div class="image-container">
+<div class="image">
+	<img src="corn.jpg">
+	<h2>corn flakes<br>
+	Rs.250 &nbsp;
+	Qty<input type="number" id="num1" min=1 max=100><br>
+	<button onclick="buy()">BUY</button> 
+	</h2>
+	</div>
+
+<div class="image">
+	<img src="cauliflower.jpg">
+	<h2>cauliflower<br>
+	Rs.50 &nbsp;
+	Qty<input type="number" id="num2" min=1 max=100><br>
+	<button onclick="buy()">BUY</button> 
+	</h2>
+	</div>
+
+<div class="image">
+	<img src="ketchup.jpg">
+	<h2>ketchup<br>
+	Rs.139 &nbsp;
+	Qty<input type="number" id="num3" min=1 max=100><br>
+	<button onclick="buy()">BUY</button> 
+	</h2>
+	</div>
+
+<div class="image">
+	<img src="kiwi.jpg">
+	<h2>kiwi<br>
+	Rs.359 &nbsp;
+	Qty<input type="number" id="num4" min=1 max=100><br>
+	<button onclick="buy()">BUY</button> 
+	</h2>
+	</div>
+
+<div class="image">
+	<img src="pineapple.jpg">
+	<h2>pineapple<br>
+	Rs.60 &nbsp;
+	Qty<input type="number" id="num5" min=1 max=100><br>
+	<button onclick="buy()">BUY</button> 
+	</h2>
+	</div>
+
+<div class="image">
+	<img src="pumpkin.jpg">
+	<h2>pumpkin<br>
+	Rs.170 &nbsp;
+	Qty<input type="number" id="num6" min=1 max=100><br>
+	<button onclick="buy()">BUY</button> 
+	</h2>
+	</div>
+</div>
+<center><div class="span"><span>TOTAL AMOUNT:=&nbsp;&nbsp;<span id="amount"></span></span></div></center>
+<script>
+function buy()
+{
+	
+	var p1=document.getElementById('num1').value;
+	var p2=document.getElementById('num2').value;
+	var p3=document.getElementById('num3').value;
+	var p4=document.getElementById('num4').value;
+	var p5=document.getElementById('num5').value;
+	var p6=document.getElementById('num6').value;
+	var tot=0;
+	
+	if(p1!="" ){
+		tot+=parseInt(p1)*250;
+	}
+	if(p2!="" ){
+		tot+=parseInt(p2)*50;
+	}
+	if(p3!="" ){
+		tot+=parseInt(p3)*139;
+	}
+	if(p4!="" ){
+		tot+=parseInt(p4)*359;
+	}
+	if(p5!="" ){
+		tot+=parseInt(p5)*60;
+	}
+	if(p6!="" ){
+		tot+=parseInt(p6)*170;
+	}
+	window.alert("Total amount:" +tot);
+	document.getElementById('amount').innerHTML=tot;
+}
+</script>
+</body>
+</html>

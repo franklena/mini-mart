@@ -1,0 +1,157 @@
+<!DOCTYPE type>
+<html>
+<head>
+<title>Mini Mart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{
+	margin:0;
+	padding:0;
+	font-family:Century Gothic;
+}
+header{
+	background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(bg1.jpg);
+	height:100%;
+	background-size:cover;
+	background-position:center;
+	overflow:hidden;
+}
+nav{
+	width:100%;
+	display:flex;
+	align-items:center;
+	margin:20px auto;
+}
+ul{
+	float:right;
+	margin-top:25px;
+	margin-left:150px;
+}
+ul li{
+	display:inline-block;
+}
+ul li a{
+	font-size:18px;
+	text-decoration:none;
+	color:#fff;
+	padding:5px 20px;
+	transition:0.6s ease;
+}
+ul li a:hover{
+	background-color:#fff;
+	color:#000;
+}
+ul li.active a{
+	background-color:#fff;
+	color:#000;
+}
+.logo img{
+	float:left;
+	width:150px;
+	height:auto;
+	margin-right:150px;
+}
+.main{
+	max-width:1200px;
+	margin:auto;
+}
+.title{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.title h1{
+	color:#fff;
+	font-size:130px;
+}
+.title p{
+	color:#fff;
+	font-size:30px;
+	text-align:center;
+}
+.button{
+	position:absolute;
+	top:70%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.btn{
+	border:2px solid #fff;
+	padding:10px 30px;
+	color:#fff;
+	text-decoration:none;
+	transition:0.6s ease;
+}
+.btn:hover{
+	background-color:#fff;
+	color:#000;
+}
+@media(max-width:768px){
+nav{
+	flex-direction:column;
+}
+ul{
+	margin-top:20px;
+	margin-left:0px;
+}
+ul li a{
+	font-size:12px;
+	padding:2px 10px;
+}
+.logo img{
+	width:90px;
+	height:auto;
+	margin-right:330px;
+}
+.title h1{
+	font-size:80px;
+}
+.title p{
+	font-size:20px;
+}
+.button{
+	top:80%;
+}
+.btn{
+	padding:5px 15px;
+	
+}
+}
+</style>
+</head>
+<body>
+<header>
+	<div class="main">
+	<nav>
+	<div class="logo">
+		<img src="logo.jpg">
+	</div>
+	<ul>
+		<li class="active"><a href="home.html">HOME</a></li>
+		<li><a href="product.html">PRODUCT</a></li>
+		<li><a href="about.html">ABOUT</a></li>
+		<li><a href="review.html">REVIEW</a></li>
+		<li><a href="contact.html">CONTACT</a></li>
+		<li><a href="login.html">LOGIN</a></li>
+	</ul>
+	</nav>
+	</div>
+
+	<div class="title">
+		<h1>MINI MART</h1>
+		<p>Buy The Best Products Here!!</p>
+	</div>
+
+	<div class="button">
+		<a href="#" class="btn" onclick="buynow()">BUY NOW</a>
+	</div>
+</header>
+<script>
+function buynow()
+{
+	location.assign("file:///C:/Users/lourd/OneDrive/Desktop/WD%20Project/product.html");
+}
+</script>
+</body>
+</html>

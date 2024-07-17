@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About us</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+nav{
+	width:100%;
+	display:flex;
+	align-items:center;
+	margin:20px auto;
+}
+ul{
+	float:right;
+	margin-top:25px;
+	margin-left:150px;
+}
+ul li{
+	display:inline-block;
+}
+ul li a{
+	font-size:18px;
+	text-decoration:none;
+	color:black;
+	padding:5px 20px;
+	transition:0.6s ease;
+}
+ul li a:hover{
+	background-color:#000;
+	color:#fff;
+}
+ul li.active a{
+	background-color:#000;
+	color:#fff;
+}
+.logo img{
+	float:left;
+	width:150px;
+	height:auto;
+	margin-right:150px;
+}
+.heading{
+	text-align:center;
+	padding:20px 30px;
+	margin-top:0px;
+	color:palegreen;
+	text-transform:uppercase;
+	font-size:70px;
+}
+.heading span{
+	color:lightblue;
+	text-transform:uppercase;
+}
+.container{
+	display:flex;
+	justify-content:center;
+	width:80%;
+	margin:25px auto;
+}
+.hero-content{
+	flex:1;
+}
+.hero-content h2{
+	font-size:30px;
+	color:#000;
+	text-transform:uppercase;	
+}
+.hero-content p{
+	font-size:17px;
+	color:#333;
+}
+.hero-content button{
+	display:inline-block;
+	background-color:red;
+	color:#fff;
+	padding:5px 10px;
+	border-radius:5px;
+	font-size:20px;
+	border:none;
+	cursor:pointer;
+}
+.hero-content button:hover{
+	background-color:red;
+	transform:scale(1.1);
+}
+.hero-image{
+	flex:2;
+	width:100px;
+	margin:auto;
+}
+img{
+	width:50%;
+	height:auto;
+	border-radius:10px;
+}
+@media(max-width:768px){
+nav{
+	flex-direction:column;
+}
+ul{
+	margin-top:20px;
+	margin-left:0px;
+}
+ul li a{
+	font-size:10px;
+	padding:2px 10px;
+}
+.logo img{
+	width:90px;
+	height:auto;
+	margin-right:330px;
+}
+.heading{
+	font-size:40px;
+}
+.hero-content h2{
+	font-size:25px;
+}
+.hero-content p{
+	font-size:16px;
+}
+.hero-content button{
+	padding:2px 3px;
+	font-size:17px;
+}
+img{
+	width:100%;
+}
+}
+</style>
+</head>
+<body>
+<header>
+	<nav>
+	<div class="logo">
+		<img src="logo.jpg">
+	</div>
+	<ul>
+		<li><a href="home.html">HOME</a></li>
+		<li><a href="product.html">PRODUCT</a></li>
+		<li class="active"><a href="about.html">ABOUT</a></li>
+		<li><a href="review.html">REVIEW</a></li>
+		<li><a href="contact.html">CONTACT</a></li>
+		<li><a href="login.html">LOGIN</a></li>
+	</ul>
+	</nav>
+</header>
+<h1 class="heading">About<span>us</span></h1>
+<div class="container">
+	<div class="hero-content">
+	<h2>we make organic food in market</h2>
+	<p> Our Grocery store is a retail store that primarily sells a general line of food, such as fruits, vegetables, meat, poultry, canned and frozen foods. We help customers buy previously bought items without hassle. As online platforms save order detials every time and make re-buying things convenient,people can easily with online grocery shopping. Online shopping deals with safety, convenience, better prices, variety, online payment, no presure shopping and time saving. It is a destination for consumers who need to purchase food and household products for both everyday use and special occasions. The wide selection of products and brands, as well as high inventory levels, allow consumers to shop the goods that their household may need for a significant period of time.</p>
+	<button class="button">Read more</button>
+	</div>
+	<div class="hero-image">
+	<img src="aboutus.jpg"><img src="bg2.jpg">
+	</div>
+</div>
+</body>
+</html>
